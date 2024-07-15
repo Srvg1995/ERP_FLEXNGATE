@@ -62,5 +62,4 @@ public class LoginPage extends WebDriverUtility{                              //
 		 loginBtn.click();
 	 }
 	
-	
 }
