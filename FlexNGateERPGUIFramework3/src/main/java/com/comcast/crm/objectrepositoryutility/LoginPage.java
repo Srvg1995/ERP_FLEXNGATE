@@ -16,7 +16,7 @@ import com.comcast.crm.generic.webdriverutility.WebDriverUtility;
  * Contains Login page elements & business lib like login()
  *
  */  
-public class LoginPage extends WebDriverUtility{                              // Rule-1  create a separte java class
+public class LoginPage extends WebDriverUtility{       // Rule-1  create a separte java class
                            
 	WebDriver driver;
 	 public LoginPage(WebDriver driver) {             //Rule 3 : Object Initialization
