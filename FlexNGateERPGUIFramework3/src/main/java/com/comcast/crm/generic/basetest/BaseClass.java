@@ -44,26 +44,33 @@ public class BaseClass {
 		}
 		
 		
-       //  @Parameters ("BROWSER")
+       // @Parameters ("BROWSER")
 	    @BeforeClass(groups = {"smokeTest", "regressionTest"})
 	    public void configBC() throws Throwable {
 	    System.out.println("==Launch the BROWSER==");
 	    
-	   // String BROWSER	= fLib.getDataFromPropertiesFile("browser");
+	   // String BROWSER = fLib.getDataFromPropertiesFile("browser");
 	    String BROWSER = System.getProperty("browser" , fLib.getDataFromPropertiesFile("browser"));
-		if(BROWSER.equals("chrome")) {
+		if(BROWSER.equals("chrome")) 
+		{
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			driver = new ChromeDriver(chromeOptions);
-		}else if(BROWSER.equals("firefox")) {
+		}
+		else if(BROWSER.equals("firefox"))
+		{
 			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions firefoxOption = new FirefoxOptions();
 			driver = new FirefoxDriver(firefoxOption);
-		}else if(BROWSER.equals("edge")) {
+		}
+		else if(BROWSER.equals("edge")) 
+		{
 			WebDriverManager.edgedriver().setup();
 			EdgeOptions edgeOption = new EdgeOptions();
 			driver = new EdgeDriver(edgeOption);
-		}else {
+		}
+		else 
+		{
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			driver = new ChromeDriver(chromeOptions);
@@ -87,8 +94,7 @@ public class BaseClass {
 		public void configAM() throws InterruptedException {
 			System.out.println("=logout=");
 			HomePage hp = new HomePage(driver);
-		hp.logout();
-			
+		    hp.logout();
 		}
 		
 	    

@@ -28,7 +28,6 @@ public class ListImpClass implements ITestListener , ISuiteListener{
 	public static ExtentTest test;
 	
 	public void onStart(ISuite suite) {
-		// TODO Auto-generated method stub
 		System.out.println("Report confifguration");
 	    String time = 	new Date().toString().replace(" ", "_").replace(":", "_");
 
